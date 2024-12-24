@@ -1,0 +1,19 @@
+name: hello-world-action
+on:
+  push:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Begin
+        run: echo "Starting..."
+      -
+        name: Do something
+        run: |
+          echo "Step 1..."
+          echo "Step 2..."
+          echo "Step 3..."
+      -
+        name: End
+        run: echo "The end"
