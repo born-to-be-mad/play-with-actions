@@ -1,0 +1,16 @@
+name: 05-parallel-jobs
+on:
+  push:
+jobs:
+  job-a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job A is running..."
+  job-b:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job B is running..."
+  job-c:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job C is running..."
