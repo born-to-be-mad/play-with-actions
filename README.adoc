@@ -30,3 +30,10 @@ You can run multiple jobs in parallel.
 
 Jobs are run in parallel by default.
 You can force job ordering by using the `needs` keyword.
+
+== 07 "Outputs"
+
+== 08 "Context variables"
+
+* See https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#contexts[Contexts]
+* https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#about-encrypted-secrets[Using secrets in GitHub Actions]

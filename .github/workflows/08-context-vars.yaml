@@ -1,0 +1,25 @@
+name: 08-context-vars
+on:
+  push:
+  pull:
+jobs:
+  use-contexts:
+    strategy:
+      matrix:
+        greeting: [Hello, Hi, Hey]
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Print greeting
+        run: echo $GREETING
+        env:
+          GREETING: ${{ matrix.greeting }}
+      -
+        name: Work with a secret
+        run: ./workWithSecret.sh
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+      -
+        name: Run only for pulls
+        if: ${{ github.event == "pull" }}
+        run: echo "Triggered by a pull request"
