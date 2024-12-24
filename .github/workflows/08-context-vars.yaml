@@ -9,6 +9,7 @@ jobs:
         greeting: [Hello, Hi, Hey]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       -
         name: Print greeting
         run: echo $GREETING
@@ -16,7 +17,8 @@ jobs:
           GREETING: ${{ matrix.greeting }}
       -
         name: Work with a secret
-        run: ./workWithSecret.sh
+        run: |
+          ./workWithSecret.sh
         env:
           MY_SECRET: ${{ secrets.MY_SECRET }}
       -

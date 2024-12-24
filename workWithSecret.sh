@@ -1,5 +1,4 @@
-#!/bin/bash
-# workWithSecret.sh
+#!/bin/sh
 
 if [ -z "$MY_SECRET" ]; then
   echo "MY_SECRET is not set"
