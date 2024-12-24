@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Event
-        run: echo "Triggered by: ${{ github.event_name }}"
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Triggered by: $GITHUB_EVENT_NAME"
       - name: Print
         run: echo "Printing..."
