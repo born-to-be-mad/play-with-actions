@@ -25,3 +25,8 @@ Simple example of a job with multiple steps triggered by a push to a repo.
 == 05 "Parallel jobs"
 
 You can run multiple jobs in parallel.
+
+== 06 "Job Ordering"
+
+Jobs are run in parallel by default.
+You can force job ordering by using the `needs` keyword.
