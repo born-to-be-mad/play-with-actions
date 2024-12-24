@@ -7,6 +7,13 @@ Firstname Lastname <vinmaster@tut.by>
 
 GitHub Actions by Example
 
-== Action 01 "hello-world"
+== 01 "hello-world"
 
 Simple example of a job with multiple steps triggered by a push to a repo.
+
+== 02 "Event Trigger"
+
+== 03 "Action"
+
+* See https://github.com/actions/checkout[Github Checkout]
+* See https://github.com/actions/setup-node[Setup Node]
