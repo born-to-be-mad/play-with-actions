@@ -34,7 +34,7 @@ jobs:
         run: echo 'Job context is ${{ toJSON(job) }}'
       -
         name: From JSON
-        env: ${{ fromJSON('{"FAVORITE_FRUIT": "STRAWBERRY", "FAVORITE_COLOR": "BLUE"}') }}
+        env: "${{ fromJSON('{\"FAVORITE_FRUIT\": \"STRAWBERRY\", \"FAVORITE_COLOR\": \"BLUE\"}') }}"
         run: echo "I would like a ${FAVORITE_COLOR} ${FAVORITE_FRUIT}"
       -
         name: Success
