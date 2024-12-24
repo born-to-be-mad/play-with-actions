@@ -1,7 +1,7 @@
 name: 08-context-vars
 on:
   push:
-  pull:
+  pull_request:
 jobs:
   use-contexts:
     strategy:
@@ -21,5 +21,5 @@ jobs:
           MY_SECRET: ${{ secrets.MY_SECRET }}
       -
         name: Run only for pulls
-        if: ${{ github.event == "pull" }}
+        if: ${{ github.event == 'pull_request' }}
         run: echo "Triggered by a pull request"
