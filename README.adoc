@@ -1,0 +1,12 @@
+= AsciiDoc Article Title
+Firstname Lastname <vinmaster@tut.by>
+1.0, Decemeber 24, 2024: AsciiDoc article template
+:toc:
+:icons: font
+:url-quickref: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+
+GitHub Actions by Example
+
+== Action 01 "hello-world"
+
+Simple example of a job with multiple steps triggered by a push to a repo.
