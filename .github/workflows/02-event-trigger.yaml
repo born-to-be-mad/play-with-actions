@@ -1,0 +1,25 @@
+name: 02-event-trigger
+on:
+  push:
+    branches:
+      - 'develop'
+      - 'temp/*'
+      - 'temp/**'
+      - '!temp/*/456'
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - 'develop'
+  schedule:
+    - cron: '*/15 * * * *'
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Event
+        run: echo "Triggered by: $GITHUB_EVENT_NAME"
+      -
+        name: Print
+        run: echo "Printing..."
