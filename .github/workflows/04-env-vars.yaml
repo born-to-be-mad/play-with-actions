@@ -1,0 +1,34 @@
+name: 04-env-vars
+on:
+  push:
+env:
+  VAR_FLOW: 'I am entire flow variable'
+jobs:
+  use-env-vars:
+    runs-on: ubuntu-latest
+    env:
+      VAR_JOB: 'I am job variable'
+    steps:
+      -
+        name: Show me the vars
+        run: echo "$VENI, $VIDI, $VICI"
+        env:
+          VAR_STEP: 'I am step variable'
+      -
+        name: Create env var
+        run: echo "VAR_NEW=Test" >> $GITHUB_ENV
+      -
+        name: Useful default vars
+        run: |
+          echo "Workflow name:  $GITHUB_WORKFLOW"
+          echo "Workspace:      $GITHUB_WORKSPACE"
+          echo "Event:          $GITHUB_EVENT_NAME"
+          echo "SHA:            $GITHUB_SHA"
+          echo "Ref:            $GITHUB_REF"
+      -
+        name: Print custom variables
+        run: |
+          echo "Flow variable:  $VAR_FLOW"
+          echo "Job variable:   $VAR_JOB"
+          echo "Step variable:  $VAR_STEP"
+          echo "New variable:   $VAR_NEW"

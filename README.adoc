@@ -17,3 +17,7 @@ Simple example of a job with multiple steps triggered by a push to a repo.
 
 * See https://github.com/actions/checkout[Github Checkout]
 * See https://github.com/actions/setup-node[Setup Node]
+
+== 04 "Environment Variables"
+
+* See https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables[environment variables available by default.]
